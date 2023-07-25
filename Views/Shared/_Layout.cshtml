@@ -5,30 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - edr_client</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/edr_client.styles.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/edr_client.styles.css" asp-append-version="true" /> *@
+    <link rel="stylesheet" href="~/css/MenuStyle.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">edr_client</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+    <header> 
+        <div class="trainlogo">
+             <img src="~/img/logoedr.png" alt="logo" width="150" height="70">
+             <img class="train" src="~/img/edr.jpg" alt="logotrain" width="90%" height="130">
             </div>
+            @* <div class="edrlogo">
+                <img src="~/img/logoedr.png" alt="logo" width="169" height="95">
+            </div> *@
+            <div> 
+            <nav class="MenuNav">
+                
+               
+            <ul>
+                <li><a href="#">Acceuil</a></li>
+                <li class="deroulant"><a href="#">A propos &ensp;</a>
+                    <ul class="sous">
+                        <li><a href="#">Organigramme</a></li>
+                        <li><a href="#">Historique</a></li>
+                        <li><a href="#">Les gares</a></li>
+                        <li><a href="#">Nos visions</a></li>
+                    </ul>
+                </li>
+                <li class="deroulant"><a href="#">Nos services &ensp;</a>
+                    <ul class="sous">
+                        <li><a href="#">Service de marchandises</a></li>
+                        <li><a href="#">Service de Passagers</a></li>
+                    </ul>
+                </li>
+                <li class="deroulant"><a href="#">Tarifs de transport &ensp;</a>
+                    <ul class="sous">
+                        <li><a href="#">Marchandises</a></li>
+                        <li><a href="#">Passagers</a></li>
+                    </ul>
+                </li>
+                <li class="deroulant"><a href="#">Horaire de train &ensp;</a>
+                    <ul class="sous">
+                        <li><a href="#">Marchandises</a></li>
+                        <li><a href="#">Passagers</a></li>
+                    </ul>
+                </li>
+                <li class="deroulant"><a href="#">Annonce &ensp;</a>
+                    <ul class="sous">
+                        <li><a href="#">Offre</a></li>
+                        <li><a href="#">Nouvelle</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacts</a></li>
+
+            </ul>
         </nav>
+       </div>
+        
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -36,7 +69,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    @* <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2023 - edr_client - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
@@ -44,6 +77,6 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("Scripts", required: false) *@
 </body>
 </html>
